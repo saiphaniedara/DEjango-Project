@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Insert Agent</title>
+</head>
+<body bgcolor="#FF7F50">
+<center>
+<h2>ENTER THE DETAILS OF THE AGENT TO INSERT</h2><br>
+<form action="./addagent" method="post">
+{%csrf_token%}
+<table><tr><td>
+<b>AGENT DETAILS</b><br><br>
+First Name:<input type="text" name="fn" size=10><br><br>
+Last Name:<input type="text" name="ln" size=10><br><br>
+Experience:<input type="text" name="exp" size=10><br><br>
+Company Name:<input type="text" name="cn" size=10>&nbsp;&nbsp;</td>
+<td>
+<b>LOCATION</b><br><br>
+Location Name:<input type="text" name="lcn" size=10><br><br>
+Location City:<input type="text" name="lcc" size=10><br><br>
+Location State:<input type="text" name="lcs" size=10><br><br>
+Pincode:<input type="text" name="lpc" size=10><br>
+</td</tr>
+<tr><td>
+<b>CONTACT INFORMATION</b><br><br>
+Mobile No:<input type="text" name="mn" size=10><br><br>
+Phone No:<input type="text" name="pn" size=10><br><br>
+Email:<input type="email" name="email" size=10><br><br>
+</td>
+<td><br><br>
+<b>ADDRESS</b><br><br>
+Add Line 1:<input type="text" name="adl1" size=10><br><br>
+Add Line 2:<input type="text" name="adl2" size=10><br><br>
+City:<input type="text" name="ac" size=10><br><br>
+State:<input type="text" name="as" size=10><br><br>
+Pincode:<input type="text" name="apc" size=10><br>
+<br>
+Landmark:<input type="text" name="lmk" size=10>
+</td></tr>
+</table>
+<br><br>
+<input type="submit" value="Insert">
+</form>
+</center>
+</body>
+</html>
