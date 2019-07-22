@@ -24,5 +24,6 @@ urlpatterns = [
     path('agent/addloc',Add_Location_details.as_view()),
     path('agent/addadd',Add_Address_details.as_view()),
     path('agent/result',Display.as_view()),
+    path('agent/agentdet',Display_Agent_Details.as_view()),
          
 ]
