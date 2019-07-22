@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Add Address</title>
+</head>
+<body bgcolor="#FF7F50">
+<center>
+<h2>AGENTS</h2><br>
+<table BORDER=1px>
+<tr>
+<th>ID</th>
+<td>FIRST NAME</th>
+<td>LAST NAME</th>
+<td>EXPERIENCE</th>
+<td>COMPANY NAME</th>
+</tr>
+{%for a in agents%}
+<tr>
+<td>{{a.id}}</td>
+<td>{{a.first_name}}</td>
+<td>{{a.last_name}}</td>
+<td>{{a.experience}}</td>
+<td>{{a.company_name}}</td>
+</tr>
+{%endfor%}
+</table><br><br>
+<form action="./addadd" method="post">
+{%csrf_token%}
+Enter the id of the agent to whom the address is to be added:<input type="text" name="id" size=2><br><br>
+<b>ADDRESS</b><br><br>
+Add Line 1:<input type="text" name="adl1" size=10><br><br>
+Add Line 2:<input type="text" name="adl2" size=10><br><br>
+City:<input type="text" name="ac" size=10><br><br>
+State:<input type="text" name="as" size=10><br><br>
+Pincode:<input type="text" name="apc" size=10><br>
+<br>
+Landmark:<input type="text" name="lmk" size=10><br><br>
+<input type="submit" value="Add Address">
+</form></center></body></html>

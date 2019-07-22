@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Agent Details</title>
+</head>
+<body bgcolor="#FF7F50">
+<center>
+<h2>AGENT DETAILS</h2><br>
+<table BORDER=1px>
+<tr><td>
+<b>AGENT</b><br>
+<table>
+<tr>
+<th>ID</th>
+<th>FIRST NAME</th>
+<th>LAST NAME</th>
+<th>EXPERIENCE</th>
+<th>COMPANY NAME</th>
+</tr>
+{%for a in agent%}
+<tr>
+<td>{{a.id}}</td>
+<td>{{a.first_name}}</td>
+<td>{{a.last_name}}</td>
+<td>{{a.experience}}</td>
+<td>{{a.company_name}}</td>
+</tr>
+{%endfor%}
+</table>
+</td>
+<td>
+<b>LOCATIONS</b><br>
+<table>
+<tr>
+<th>ID</th>
+<th>AGENT ID</th>
+<th>LOCATION NAME</th>
+<th>LOCATION CITY</th>
+<th>LOCATION STATE</th>
+<th>PINCODE</th>
+</tr>
+{%for b in locations%}
+<tr>
+<td>{{b.id}}</td>
+<td>{{b.agent_id}}</td>
+<td>{{b.loc_name}}</td>
+<td>{{b.loc_city}}</td>
+<td>{{b.loc_state}}</td>
+<td>{{b.pincode}}</td>
+</tr>
+{%endfor%}
+</table>
+</td></tr>
+<tr>
+<td>
+<b>CONTACT INFO</b><br>
+<table>
+<tr>
+<th>ID</th>
+<th>AGENT ID</th>
+<th>MOBILE NO</th>
+<th>PHONE NO</th>
+<th>EMAIL ID</th>
+</tr>
+{%for c in cinfo%}
+<tr>
+<td>{{c.id}}</td>
+<td>{{c.agent_id}}</td>
+<td>{{c.mobile_no}}</td>
+<td>{{c.phone_no}}</td>
+<td>{{c.email_id}}</td>
+</tr>
+{%endfor%}
+</table>
+</td>
+<td>
+<b>ADDRESS</b><br>
+<table>
+<tr>
+<th>ID</th>
+<th>AGENT ID</th>
+<th>ADDRESS LINE 1</th>
+<th>ADDRESS LINE 2</th>
+<th>CITY</th>
+<th>STATE</th>
+<th>PINCODE</th>
+<th>LANDMARK</th>
+</tr>
+{%for d in address%}
+<tr>
+<td>{{d.id}}</td>
+<td>{{d.agent_id}}</td>
+<td>{{d.add_line1}}</td>
+<td>{{d.add_line2}}</td>
+<td>{{d.city}}</td>
+<td>{{d.state}}</td>
+<td>{{d.pincode}}</td>
+<td>{{d.landmark}}</td>
+</tr>
+{%endfor%}
+</table>
+</td>
+</tr>
+</table>
+<form action="./dispag" method="post">
+{%csrf_token%}
+<br><br>
+<input type="submit" value="Display Agents" name="ab">
+</form></center>
+</body>
+</html>
