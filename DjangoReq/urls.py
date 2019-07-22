@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from reqapp.views import GetInput,Relationship_test,Result,Add_Location_details,Add_Address_details,Display
+from reqapp.views import GetInput,Relationship_test,Result,Add_Location_details,Add_Address_details,Display,Display_Agent_Details
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('agent/insert',GetInput.as_view(),name='insert'),
